@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class TimeDuration {
 	
@@ -50,6 +51,22 @@ public class TimeDuration {
 		System.out.println(new TimeDuration(0).toString());
 		System.out.println(new TimeDuration(732).toString());
 		System.out.println(new TimeDuration(7242).toString());
+		
+		
+		// the raceResult 
+		
+		// create events 
+		ArrayList<Event> events = new ArrayList<Event>(0);
+		
+		RaceResults r = new RaceResults(events);
+		r.onNewResult("a", new TimeDuration(50));
+		r.onNewResult("b", new TimeDuration(60));
+		r.onNewResult("c", new TimeDuration(40));
+		r.onNewResult("d", new TimeDuration(3600));
+		
+		r.printResults();
+		
+		// Si il y a Deux timeDuration egaux alors le resultat vas retourner qu'un seul gagnant au lieu de 2 
 		
 		
 	}

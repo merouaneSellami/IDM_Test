@@ -1,5 +1,5 @@
 
-public class Event {
+public class Event implements Comparable {
 
 	private String RFIDTag;
 	private TimeDuration raceTime;
@@ -22,5 +22,16 @@ public class Event {
 	}
 	public void setRaceTime(TimeDuration raceTime) {
 		this.raceTime = raceTime;
+	}
+	
+	
+	@Override
+	public int compareTo(Object evenCompare) {
+
+		int compareage=((Event)evenCompare).getRaceTime().getNumberOfSeconds();
+       
+        return this.raceTime.getNumberOfSeconds()-compareage;
+
+		
 	}
 }

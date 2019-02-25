@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.*;
 
 public class RaceResults {
 	
@@ -26,6 +26,15 @@ public class RaceResults {
 	
 	{
 		this.events.add(new Event(tagNumber,resultTime));
+		
+	}
+	
+	public void printResults()
+	
+	{ 
+		Collections.sort(this.events);
+
+		System.out.println("winner: is " +this.events.get(0).getRFIDTag());
 		
 	}
 	
